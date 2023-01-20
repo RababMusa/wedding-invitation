@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wedding</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            overflow-x: hidden;
+        }
+        main{
+            background-image: url('img/Bonus-Background.jpg');
+            background-repeat: no-repeat;
+            /* background-position: center; */
+            background-size: cover;
+            margin: auto;
+            max-width: 520px;
+            position: relative;
+            min-height: 660px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .one,.two,.three,.four,.five,.six,.seven{
+            display: none;
+            font-size: 22px;
+            text-align: center;
+            margin-bottom: 10px;
+            color: #74584B;
+            font-family: 'El Messiri', sans-serif;
+        }
+        .three{
+            font-weight: bold;
+        }
+        .ml4{
+            padding-top: 30px;
+        }
+        .test{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        /* .ml4 {
+        position: relative;
+        font-weight: 500;
+        font-size: 3.5em;
+        text-align: center;
+        }
+        .ml4 .letters {
+        position: absolute;
+        margin: auto;
+        left: 0;
+        top: 0.3em;
+        right: 0;
+        opacity: 0; 
+        top:100px;
+        } */
+    </style>
+</head>
+<body>
+    <main>
+    <div class="ml4">
+      <div class="testone test">
+        <img width="70%"  class="one" src="img/1-wedd.png" alt="">
+        <!-- <p class="letters letters-1 one">إن السرور إذا تشارك ضوعفت <br>بسماته مع زمرة الأحبة</p>
+        <p class="letters letters-2 two">بكل الحب والود يشرفنا<br> حضوركم لحفل خطوبة</p>
+        <p class="letters letters-3 three">وليد & مي</p> -->
+      </div>
+       <div class="testtwo test">
+        <img width="70%" src="img/2-wedd.png" class="two" alt="">
+        <!-- <p class="letters letters-4 four">29.01.2023</p>
+        <p class="letters letters-5 five">Mountain View Resort</p> -->
+       </div>
+       <div class="testthree test">
+        <img width="70%" src="img/3-wedd.png" class="three" alt="">
+        <!-- <p class="letters letters-6 six"> يبدأ الحفل 7:00 مساءً</p>
+        <p class="letters letters-7 seven">العشاء الساعة 11:00 مساءً</p> -->
+       </div>
+       <div class="testfour test">
+        <img width="50%" src="img/4-wedd.png" class="four" alt="">
+        <!-- <p class="letters letters-6 six"> يبدأ الحفل 7:00 مساءً</p>
+        <p class="letters letters-7 seven">العشاء الساعة 11:00 مساءً</p> -->
+       </div>
+    </div>
+    </main>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $(function(){
+        // $(".one").fadeIn(3000);
+        // $(".two").fadeIn(5000);
+        // $(".three").fadeIn(10000,function(){
+        //     $(".testone").css("display", "none",
+        //         $(".four").fadeIn(3000,
+        //         $(".five").fadeIn(5000,function(){
+        //         $(".testtwo").css("display", "none");
+        //         $(".six").fadeIn(3000);
+        //         $(".seven").fadeIn(5000);
+                
+                
+        //     })
+               
+        $(".one").fadeIn(10000,function(){
+            $(".testone").css("display", "none",
+                $(".two").fadeIn(3000,function(){
+                $(".testtwo").css("display", "none");
+                $(".three").fadeIn(3000,function(){
+                $(".testthree").css("display", "none")
+                $(".four").fadeIn(5000);
+                
+              });
+            }
+            ));
+        });
+       
+       
+        // $(".five").fadeIn(2000000,function(){
+        //     $(".testtwo").css("display", "none");
+        // });
+        
+        // $(".six").fadeIn(95000);
+        // $(".seven").fadeIn(100000);
+
+    });
+</script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script> -->
+<!-- <script>
+    var ml4 = {};
+ml4.opacityIn = [0,1];
+ml4.scaleIn = [0.2, 0.4];
+ml4.scaleOut = 1;
+ml4.durationIn = 800;
+ml4.durationOut = 600;
+ml4.delay = 500;
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml4 .letters-1',
+    opacity: ml4.opacityIn,
+    scale: ml4.scaleIn,
+    duration: ml4.durationIn
+  }).add({
+    targets: '.ml4 .letters-1',
+    opacity: 0,
+    scale: ml4.scaleOut,
+    duration: ml4.durationOut,
+    easing: "easeInExpo",
+    delay: ml4.delay
+  }).add({
+    targets: '.ml4 .letters-2',
+    opacity: ml4.opacityIn,
+    scale: ml4.scaleIn,
+    duration: ml4.durationIn
+  }).add({
+    targets: '.ml4 .letters-2',
+    opacity: 0,
+    scale: ml4.scaleOut,
+    duration: ml4.durationOut,
+    easing: "easeInExpo",
+    delay: ml4.delay
+  }).add({
+    targets: '.ml4 .letters-3',
+    opacity: ml4.opacityIn,
+    scale: ml4.scaleIn,
+    duration: ml4.durationIn
+  }).add({
+    targets: '.ml4 .letters-3',
+    opacity: 0,
+    scale: ml4.scaleOut,
+    duration: ml4.durationOut,
+    easing: "easeInExpo",
+    delay: ml4.delay
+  }).add({
+    targets: '.ml4',
+    opacity: 0,
+    duration: 500,
+    delay: 500
+  });
+</script> -->
+</html>
